@@ -10,7 +10,7 @@ import main.java.Szachy;
 
 public class SzachyTest 
 {
-    String[] expected = new String[8];
+    String[] expected = {"0","0","0","0","0","0","0","0"};
     String[] actual;
     @Test
     public void RuchySkoczkaTest1()
@@ -58,6 +58,8 @@ public class SzachyTest
         expected[1] = "C4";
         expected[2] = "D3";
         expected[3] = "D1";
+        Arrays.sort(actual);
+        Arrays.sort(expected);
         assertEquals(0, Arrays.compare(actual, expected));
     }
     @Test

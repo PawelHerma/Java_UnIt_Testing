@@ -41,7 +41,7 @@ public class Szachy
     
     public static String[] RuchySkoczka(char x, int y)
     {
-        String[] result = new String[8];
+        String[] result = {"0","0","0","0","0","0","0","0"};
         if(x == 'A' && y == 1)
         {
             result[0] = "B3";
@@ -80,7 +80,6 @@ public class Szachy
                 }
             }
         }
-
         return result;
     }
 }
