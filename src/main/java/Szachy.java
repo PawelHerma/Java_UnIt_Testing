@@ -17,7 +17,7 @@ public class Szachy
         this.y = y;
     }
 
-    private String PodajPozycje()
+    public String PodajPozycje()
     {
         return this.x + this.y;
     }

@@ -26,6 +26,13 @@ public class SzachyTest
         expected[6] = "G4";
         expected[7] = "F3";
         assertArrayEquals(expected, actual);
-        //TODO: dokonczyc test jednostkowy dla 8 pozycji, ztestowac PodajPozycje()
+    }
+    @Test
+    public void PodajPozycjeTest()
+    {
+        String expected = "E5";
+        Szachy actualSzachy = new Szachy("E",5);
+        String actual = actualSzachy.PodajPozycje();
+        assertEquals(expected, actual);
     }
 }
