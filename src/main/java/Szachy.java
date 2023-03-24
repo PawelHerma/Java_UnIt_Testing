@@ -22,6 +22,22 @@ public class Szachy
     {
         return Character.toString(this.x) + this.y;
     }
+
+    public Boolean SprawdzPozycje()
+    {
+        if(this.x < 'A' || this.x > 'H')
+        {
+            return false;
+        }
+        else if (this.y < 1 || this.y > 8)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
     
     public static String[] RuchySkoczka(char x, int y)
     {
@@ -58,7 +74,10 @@ public class Szachy
             for (int i = 0 ; i < 8; i++)
             {
                 Szachy pomoc = new Szachy((char)(x + positions[i][0]), y + positions[i][1]);
-                result[i] = pomoc.PodajPozycje();
+                if(pomoc.SprawdzPozycje())
+                {
+                    result[i] = pomoc.PodajPozycje();
+                }
             }
         }
 

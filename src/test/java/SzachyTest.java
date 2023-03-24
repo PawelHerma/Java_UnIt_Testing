@@ -51,11 +51,27 @@ public class SzachyTest
         assertArrayEquals(expected, actual);
     }
     @Test
+    public void RuchySkoczkaTest4()
+    {
+        actual = Szachy.RuchySkoczka('B', 2);
+        expected[0] = "A4";
+        expected[1] = "C4";
+        expected[2] = "D3";
+        expected[3] = "D1";
+        assertEquals(0, Arrays.compare(actual, expected));
+    }
+    @Test
     public void PodajPozycjeTest()
     {
         String expected = "E5";
         Szachy actualSzachy = new Szachy('E',5);
         String actual = actualSzachy.PodajPozycje();
         assertEquals(expected, actual);
+    }
+    @Test
+    public void SprawdzPozycjeTest()
+    {
+        Szachy test = new Szachy('A', 1);
+        assertTrue(test.SprawdzPozycje());
     }
 }
