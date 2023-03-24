@@ -8,15 +8,20 @@ import main.java.Szachy;
 
 public class SzachyTest 
 {
+    String[] expected = new String[8];
+    String[] actual;
     @Test
-    public void RuchySkoczkaTest()
+    public void RuchySkoczkaTest1()
     {
-        String[] expected = new String[8];
         expected[0] = "B3";
         expected[1] = "C2";
-        String[] actual = Szachy.RuchySkoczka("A",1);
+        actual = Szachy.RuchySkoczka('A',1);
         assertArrayEquals(expected, actual);
-        actual = Szachy.RuchySkoczka("E",5);
+    }
+    @Test
+    public void RuchySkoczkaTest2()
+    {
+        actual = Szachy.RuchySkoczka('E',5);
         expected[0] = "D3";
         expected[1] = "C4";
         expected[2] = "C6";
@@ -31,7 +36,7 @@ public class SzachyTest
     public void PodajPozycjeTest()
     {
         String expected = "E5";
-        Szachy actualSzachy = new Szachy("E",5);
+        Szachy actualSzachy = new Szachy('E',5);
         String actual = actualSzachy.PodajPozycje();
         assertEquals(expected, actual);
     }

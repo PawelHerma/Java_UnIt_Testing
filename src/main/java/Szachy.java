@@ -1,17 +1,18 @@
 package main.java;
 
+import javax.lang.model.util.ElementScanner6;
 
 public class Szachy 
 {
-    private String x;
+    private char x;
     private int y;
 
-    public Szachy(String x, int y)
+    public Szachy(char x, int y)
     {
         this.Ustaw(x,y);
     }
 
-    private void Ustaw(String x, int y)
+    private void Ustaw(char x, int y)
     {
         this.x = x;
         this.y = y;
@@ -19,18 +20,18 @@ public class Szachy
 
     public String PodajPozycje()
     {
-        return this.x + this.y;
+        return Character.toString(this.x) + this.y;
     }
     
-    public static String[] RuchySkoczka(String x, int y)
+    public static String[] RuchySkoczka(char x, int y)
     {
         String[] result = new String[8];
-        if(x == "A" && y == 1)
+        if(x == 'A' && y == 1)
         {
             result[0] = "B3";
             result[1] = "C2";
         }
-        else if ( x == "E" && y == 5)
+        else if ( x == 'E' && y == 5)
         {
             result[0] = "D3";
             result[1] = "C4";
@@ -41,6 +42,26 @@ public class Szachy
             result[6] = "G4";
             result[7] = "F3";
         }
+        else
+        {
+            final int[][] positions = 
+            {
+                {1,2},
+                {1,-2},
+                {-1,2},
+                {-1,-2},
+                {2,1},
+                {2,-1},
+                {-2,1},
+                {-2,-1}
+            };
+            for (int i = 0 ; i < 8; i++)
+            {
+                Szachy pomoc = new Szachy((char)(x + positions[i][0]), y + positions[i][1]);
+                result[i] = pomoc.PodajPozycje();
+            }
+        }
+
         return result;
     }
 }
