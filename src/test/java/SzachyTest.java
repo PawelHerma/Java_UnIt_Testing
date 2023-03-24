@@ -16,12 +16,16 @@ public class SzachyTest
         expected[1] = "C2";
         String[] actual = Szachy.RuchySkoczka("A",1);
         assertArrayEquals(expected, actual);
-        // for(int i = 0; i < expected.length; i++)
-        // {
-        //     assertEquals(expected[i], actual[i]);
-        // }
         actual = Szachy.RuchySkoczka("E",5);
-        expected[0] = "";
+        expected[0] = "D3";
+        expected[1] = "C4";
+        expected[2] = "C6";
+        expected[3] = "D7";
+        expected[4] = "F7";
+        expected[5] = "G6";
+        expected[6] = "G4";
+        expected[7] = "F3";
+        assertArrayEquals(expected, actual);
         //TODO: dokonczyc test jednostkowy dla 8 pozycji, ztestowac PodajPozycje()
     }
 }

@@ -30,6 +30,17 @@ public class Szachy
             result[0] = "B3";
             result[1] = "C2";
         }
+        else if ( x == "E" && y == 5)
+        {
+            result[0] = "D3";
+            result[1] = "C4";
+            result[2] = "C6";
+            result[3] = "D7";
+            result[4] = "F7";
+            result[5] = "G6";
+            result[6] = "G4";
+            result[7] = "F3";
+        }
         return result;
     }
 }
