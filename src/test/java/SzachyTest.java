@@ -2,6 +2,8 @@ package test.java;
 
 import static org.junit.Assert.*;
 
+import java.util.Arrays;
+
 import org.junit.Test;
 
 import main.java.Szachy;
@@ -30,6 +32,22 @@ public class SzachyTest
         expected[5] = "G6";
         expected[6] = "G4";
         expected[7] = "F3";
+        assertArrayEquals(expected, actual);
+    }
+    @Test
+    public void RuchySkoczkaTest3()
+    {
+        actual = Szachy.RuchySkoczka('D', 4);
+        expected[0] = "C2";
+        expected[1] = "B3";
+        expected[2] = "B5";
+        expected[3] = "C6";
+        expected[4] = "E6";
+        expected[5] = "F5";
+        expected[6] = "F3";
+        expected[7] = "E2";
+        Arrays.sort(actual);
+        Arrays.sort(expected);
         assertArrayEquals(expected, actual);
     }
     @Test
