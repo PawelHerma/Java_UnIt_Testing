@@ -1,7 +1,5 @@
 package main.java;
 
-import javax.lang.model.util.ElementScanner6;
-
 public class Szachy 
 {
     private char x;
