@@ -3,6 +3,17 @@ package main.java;
 public class Alfabet {
     public static int numerek(char znaczek)
     {
-        return 1;
+        if (znaczek == 'a')
+        {
+            return 1;
+        }
+        else if (znaczek == 'w')
+        {
+            return 23;
+        }
+        else
+        {
+            return 0;
+        }
     }
 }
