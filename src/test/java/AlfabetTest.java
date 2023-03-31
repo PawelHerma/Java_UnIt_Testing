@@ -16,4 +16,13 @@ public class AlfabetTest {
 
         assertEquals(oczekiwania, rzeczywistość);
     }
+    @Test
+    public void AlfabetTest2()
+    {
+        char znaczek = 'w';
+        int oczekiwania = 23;
+        int rzeczywistość = Alfabet.numerek(znaczek);
+
+        assertEquals(oczekiwania, rzeczywistość);
+    }
 }
